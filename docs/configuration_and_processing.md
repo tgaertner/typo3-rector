@@ -32,11 +32,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $containerConfigurator->import(Typo3SetList::TYPO3_76);
-    $containerConfigurator->import(Typo3SetList::TYPO3_87);
-    $containerConfigurator->import(Typo3SetList::TYPO3_95);
-    $containerConfigurator->import(Typo3SetList::TYPO3_104);
-    $containerConfigurator->import(Typo3SetList::TYPO3_11);
+    $containerConfigurator->import(Typo3SetList::TCA_76);
+    $containerConfigurator->import(Typo3SetList::TCA_87);
+    $containerConfigurator->import(Typo3SetList::TCA_95);
 
     // FQN classes are not imported by default. If you don't do it manually after every Rector run, enable it by:
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
